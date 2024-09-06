@@ -22,7 +22,7 @@ Console.ReadKey() |> ignore // closes console if key is pressed
 // %s = runs something, in the form of a string (e.g. it can run a function, which is given in a string format)
 // %i = int version
 // %f = float version
-// %A = uppercase version
+// %A = swiss army knife. Can display all data types in readable format, including if a datatype is unknown to the programmer.
 // %O = object version
 // %[number]s = adds padding, e.g. printfn "%-5s %5s" "1" "2" -> 1     2 (or something like this)
 // %*s = dynamic padding, e.g. printfn "%*s" 10 "Test" -> [start of line]          test (or something like this)
