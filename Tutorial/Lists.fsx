@@ -16,4 +16,10 @@ let doFuncs() =
     |> printfn "\nModulus list doubled: %A"
 doFuncs()
 
+// * List and slice
+// let arr = [ 1..100]
+// let lastElement = arr.[arr.Length - 1]
+// printfn "Sliced element to -1 in array '%A', is: %d" arr lastElement  // Output: 4
+
+
 printfn ""
