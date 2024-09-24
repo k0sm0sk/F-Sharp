@@ -2,7 +2,7 @@
 let vectorLength (a:float, b:float) = 
     sqrt(a**2 + b**2)
 
-printfn "The length of the given vector is (%.3f) \n" (vectorLength (1, 1))
+printfn "\nThe length of the given vector is (%.3f) \n" (vectorLength (1, 1))
 
 let vectorAdd (a:float, b:float) (c:float, d:float) = 
     (a + c), (d + b)

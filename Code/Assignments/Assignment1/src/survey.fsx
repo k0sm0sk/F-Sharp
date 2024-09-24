@@ -12,15 +12,16 @@ let survey =
         ("UUID9", 3, 3, 1, 2, 4)
     ]
 
+printfn "\nThe complete survey is: \n%A\n\n---------------------------" survey
+
+
 let answerSorter = 
     survey 
     |> List.filter (fun (_, _, answer2, _, _, _) -> answer2 = 1)
     |> List.map (fun (uuid, _, _, _, _, _) -> uuid)
 
 
-printfn "
-The students that answered question 2 with 1 
-are: %A, which totals to: %A students\n" answerSorter answerSorter.Length
+printfn "\nThe students that answered question 2 with 1 as their answer \nare: %A, which totals to: %A students\n" answerSorter answerSorter.Length
 
 
 let percentageAnswers = 
@@ -31,8 +32,8 @@ let rec percentageSorter n =
     match n with
     | _ when n >= percentageAnswers.Length -> exit 0
     | _ -> 
-    printfn "Percentage of answer %A, is %A %%" (fst percentageAnswers[n]) (float (snd percentageAnswers[n]).Length/float survey.Length*100.0) 
+    printfn "Percentage of students who answered %A, is %A %%" (fst percentageAnswers[n]) (float (snd percentageAnswers[n]).Length/float survey.Length*100.0) 
     percentageSorter (n+1)
 
 
-printfn "Test %A" (percentageSorter 0)
+printfn "%A" (percentageSorter 0)
