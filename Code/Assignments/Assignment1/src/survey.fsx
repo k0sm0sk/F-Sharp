@@ -12,6 +12,20 @@ let survey =
         ("UUID9", 3, 3, 1, 2, 4)
     ]
 
+
+let surveyList =
+    [
+        [1; 4; 4; 3; 3; 1]   
+        [2; 2; 3; 1; 4; 3]   
+        [3; 1; 1; 2; 1; 4]   
+        [4; 2; 1; 4; 3; 2]   
+        [5; 1; 4; 3; 4; 2]   
+        [6; 4; 2; 2; 1; 3]
+        [7; 1; 3; 2; 1; 4] 
+        [8; 2; 4; 3; 2; 1]     
+        [9; 3; 3; 1; 2; 4]     
+    ]
+
 printfn "\nThe complete survey is: \n%A\n\n---------------------------" survey
 
 
@@ -38,3 +52,4 @@ let rec percentageSorter n =
 
 
 printfn "%A" (percentageSorter 0)
+
