@@ -35,7 +35,7 @@ let rec percentageSorter n =
     | _ when n >= percentageAnswers.Length -> exit 0 // ? handles out of bounds n-value and terminates program.
     | _ when n < 0 -> percentageSorter(0) // ? ensures minimum input will be 0 (as the first index is 0)
     | _ -> 
-    printfn "Percentage of students who answered %A, is %A %%" (fst percentageAnswers[n]) (float (snd percentageAnswers[n]).Length/float survey.Length*100.0) 
+    printfn "Percentage of students who answered %A, is %.3f %%" (fst percentageAnswers[n]) (float (snd percentageAnswers[n]).Length/float survey.Length*100.0) 
     percentageSorter (n+1)
 
 
