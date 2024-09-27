@@ -14,7 +14,7 @@ let survey =
 
 
 
-printfn "\nThe complete survey is: \n%A\n\n---------------------------" survey
+printfn "\nThe complete survey is: \n%A\n\n---------------------------" survey // makes a new line in the terminal to seperate the survey printed out and the result from the various functions
 
 
 let answerSorter = 
@@ -26,16 +26,16 @@ let answerSorter =
 printfn "\nThe students that answered question 2 with 1 as their answer \nare: %A, which totals to: %A students\n" answerSorter answerSorter.Length
 
 
-let percentageAnswers = 
+let groupedAnswers = 
     survey
     |> List.groupBy (fun (_, _, answer2, _, _, _) -> answer2)
 
 let rec percentageSorter n =
     match n with
-    | _ when n >= percentageAnswers.Length -> exit 0 // ? handles out of bounds n-value and terminates program.
+    | _ when n >= groupedAnswers.Length -> exit 0 // ? handles out of bounds n-value and terminates program.
     | _ when n < 0 -> percentageSorter(0) // ? ensures minimum input will be 0 (as the first index is 0)
     | _ -> 
-    printfn "Percentage of students who answered %A, is %.3f %%" (fst percentageAnswers[n]) (float (snd percentageAnswers[n]).Length/float survey.Length*100.0) 
+    printfn "Percentage of students who answered %A, is %.3f %%" (fst groupedAnswers[n]) (float (snd groupedAnswers[n]).Length/float survey.Length*100.0) 
     percentageSorter (n+1)
 
 
